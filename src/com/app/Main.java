@@ -75,7 +75,7 @@ class MixedGroup extends MusicGroupBuilder{
     }
 }
 
-class Director {
+class MainBuilder {
 
     public static MusicGroup construct(MusicGroupBuilder builder){
         builder.buildGroup();
@@ -88,9 +88,9 @@ public class Main {
         MusicGroupBuilder songgroup = new SongGroup();
         MusicGroupBuilder dansegroup = new DanseGroup();
         MusicGroupBuilder mixedgroup = new MixedGroup();
-        MusicGroup SG = Director.construct(songgroup);
-        MusicGroup DG = Director.construct(dansegroup);
-        MusicGroup MG = Director.construct(mixedgroup);
+        MusicGroup SG = MainBuilder.construct(songgroup);
+        MusicGroup DG = MainBuilder.construct(dansegroup);
+        MusicGroup MG = MainBuilder.construct(mixedgroup);
         SG.show();
         DG.show();
         MG.show();
